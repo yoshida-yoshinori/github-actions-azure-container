@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CONTAINER_REGISTRY_NAME: 'your-registry'
-      CONTAINER_IMAGE_NAME: 'aaa:v1'
+      CONTAINER_REGISTRY_NAME: 'webappsregitsuka'
+      CONTAINER_IMAGE_NAME: 'dotnet-aspnet:6.0'
     steps:
     - uses: actions/checkout@v2
 

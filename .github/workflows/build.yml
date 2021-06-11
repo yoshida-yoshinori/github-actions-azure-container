@@ -15,11 +15,6 @@ jobs:
         login-server: ${{ env.CONTAINER_REGISTRY_NAME }}.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
-    - uses: azure/docker-login@v1
-      with:
-        login-server: index.docker.io
-        username: ${{ secrets.DOCKERIO_USERNAME }}
-        password: ${{ secrets.DOCKERIO_PASSWORD }}
     - run: |
         docker build . -t ${{ env.CONTAINER_REGISTRY_NAME }}.azurecr.io/${{ env.CONTAINER_IMAGE_NAME }}:${{ github.sha }}
         docker push ${{ env.CONTAINER_REGISTRY_NAME }}.azurecr.io/${{ env.CONTAINER_IMAGE_NAME }}:${{ github.sha }}

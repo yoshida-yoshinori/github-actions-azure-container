@@ -5,15 +5,18 @@ WORKDIR /source
 # copy csproj and restore as distinct layers
 COPY *.sln .
 COPY aspnetapp/*.csproj ./aspnetapp/
-RUN dotnet restore
+RUN dotnet restore -r win-x64
 
 # copy everything else and build app
 COPY aspnetapp/. ./aspnetapp/
 WORKDIR /source/aspnetapp
-RUN dotnet publish -c release -o /app --no-restore
+RUN dotnet publish -c release -o /app -r win-x64 --self-contained false --no-restore
 
 # final stage/image
+# Relies on 5.0 multi-arch tag to pick the same Windows version as the host. 
+# Alternatively, a release specific tag can be used, like: `5.0-nanoserver-1809`
+# Other versions are 20H2 and 2004 (in place of the `1809` substring above)
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
 COPY --from=build /app ./
-ENTRYPOINT ["dotnet", "aspnetapp.dll"]
+ENTRYPOINT ["aspnetapp"]

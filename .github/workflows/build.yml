@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CONTAINER_REGISTRY_NAME: 'webappsregitsuka'
-      CONTAINER_IMAGE_NAME: 'dotnet-aspnet:6.0'
+      CONTAINER_IMAGE_NAME: 'dotnet-aspnet'
     steps:
     - uses: actions/checkout@v2
     - uses: azure/docker-login@v1

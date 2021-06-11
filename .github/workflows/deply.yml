@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CONTAINER_REGISTRY_NAME: 'webappsregitsuka'
-      CONTAINER_IMAGE_NAME: 'dotnet-aspnet:6.0'
+      CONTAINER_IMAGE_NAME: 'dotnet-aspnet'
       APP_NAME: 'app-from-githubactions'
     steps:
     - uses: actions/checkout@v2

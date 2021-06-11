@@ -10,7 +10,6 @@ jobs:
       CONTAINER_IMAGE_NAME: 'dotnet-aspnet:6.0'
     steps:
     - uses: actions/checkout@v2
-
     - uses: azure/docker-login@v1
       with:
         login-server: ${{ env.CONTAINER_REGISTRY_NAME }}.azurecr.io

@@ -13,7 +13,7 @@ jobs:
 
     - uses: azure/docker-login@v1
       with:
-        login-server: mycontainer.azurecr.io
+        login-server: ${{ env.CONTAINER_REGISTRY_NAME }}.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
 

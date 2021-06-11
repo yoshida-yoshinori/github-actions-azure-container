@@ -1,0 +1,1 @@
+az ad sp create-for-rbac --name "<aaa>" --role contributor --scopes "<resourcegroup>" --sdk-auth

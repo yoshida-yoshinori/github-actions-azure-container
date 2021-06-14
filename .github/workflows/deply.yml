@@ -6,9 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CONTAINER_REGISTRY_NAME: 'webappsregitsuka'
-      CONTAINER_IMAGE_NAME: 'dotnet-aspnet'
-      APP_NAME: 'app-from-githubactions-tsuka'
+      CONTAINER_REGISTRY_NAME: 'xxx'
+      CONTAINER_IMAGE_NAME: 'xxxx'
+      APP_NAME: 'xxxxx'
     steps:
     - uses: actions/checkout@v2
     - uses: azure/docker-login@v1

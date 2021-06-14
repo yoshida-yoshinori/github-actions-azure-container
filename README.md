@@ -198,3 +198,5 @@ aspnetapp           nanoserver          1e16a73b42b3        34 seconds ago      
 
 * [.NET Docker Samples](../README.md)
 * [.NET Framework Docker Samples](https://github.com/microsoft/dotnet-framework-docker/blob/main/samples/README.md)
+'
+* [Setting GitHub Actions](./docs/Setting-GitHub-Actions.md)

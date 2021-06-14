@@ -1,4 +1,4 @@
-name: Linux Container Node Workflow for Build
+name: Linux Container ASP.NET Core Workflow for Build
 
 on: [push]
 

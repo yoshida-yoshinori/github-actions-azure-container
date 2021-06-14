@@ -2,21 +2,25 @@
 
 ##  Service Principal
 1. Replace Variable
-- _{sp-name}_ -> Service Principal Name
-- _{subscription-id}_ -> Subscription ID
+- _xxx_ -> Service Principal Name
+- _xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_ -> Subscription ID
+- _xxxx_ -> Resource Group Name
+- _xxxxx_ -> Application Name from Azure WebApps
 
 ```
-$subscriptionId = "xxx"
-$appName = "xxxx"
+$servicePrincipalName = "xxx"
+$subscriptionId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$resourceGroupName = "xxxx"
 $appName = "xxxxx"
-az ad sp create-for-rbac --name "{sp-name}" --sdk-auth --role contributor `
+az ad sp create-for-rbac --name "${servicePrincipalName}" --sdk-auth --role contributor `
 --scopes "/subscriptions/${subscriptionId}/resourceGroups/${resourceGroupName}/providers/Microsoft.Web/sites/${appName}"
 ```
 or
 ```
-$subscriptionId = "dc5d3c89-36dd-4a3c-b09b-e6ee41f6d5b5"
-$resourceGroupName = ""
-az ad sp create-for-rbac --name "{sp-name}" --sdk-auth --role contributor `
+$servicePrincipalName = "xxx"
+$subscriptionId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$resourceGroupName = "xxxx"
+az ad sp create-for-rbac --name "${servicePrincipalName}" --sdk-auth --role contributor `
 --scopes "/subscriptions/${subscriptionId}/resourceGroups/${resourceGroupName}"
 ```
 Copy result of [az ad sp...]

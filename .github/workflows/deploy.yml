@@ -8,7 +8,7 @@ jobs:
     env:
       CONTAINER_REGISTRY_NAME: 'sampleregtsu0707'
       CONTAINER_IMAGE_NAME: 'dotnetsample'
-      APP_NAME: 'app-from-githubactions-tsuka0707'
+      APP_NAME: 'sampleapps0707tsu'
     steps:
     - uses: actions/checkout@v2
     - uses: azure/docker-login@v1

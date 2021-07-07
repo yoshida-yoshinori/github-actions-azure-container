@@ -6,9 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CONTAINER_REGISTRY_NAME: 'xxx'
-      CONTAINER_IMAGE_NAME: 'xxxx'
-      APP_NAME: 'xxxxx'
+      CONTAINER_REGISTRY_NAME: 'sampleregtsu0707'
+      CONTAINER_IMAGE_NAME: 'dotnetsample'
+      APP_NAME: 'app-from-githubactions-tsuka0707'
     steps:
     - uses: actions/checkout@v2
     - uses: azure/docker-login@v1

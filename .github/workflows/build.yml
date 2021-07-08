@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CONTAINER_REGISTRY_NAME: 'sampleregtsu0707'
+      CONTAINER_REGISTRY_NAME: 'acr20210708yoshida'
       CONTAINER_IMAGE_NAME: 'dotnetsample'
     steps:
     - uses: actions/checkout@v2

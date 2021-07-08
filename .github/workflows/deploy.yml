@@ -6,9 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CONTAINER_REGISTRY_NAME: 'sampleregtsu0707'
+      CONTAINER_REGISTRY_NAME: 'acr20210708yoshida'
       CONTAINER_IMAGE_NAME: 'dotnetsample'
-      APP_NAME: 'sampleapps0707tsulinux'
+      APP_NAME: 'app20210708yoshida'
     steps:
     - uses: actions/checkout@v2
     - uses: azure/docker-login@v1
